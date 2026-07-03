@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speech Emotion Recognition</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<div class="bg-white border-4 border-black p-8 rounded-xl shadow-lg backdrop-blur-sm w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-4 text-center">SPEECH EMOTION RECOGNITION</h1>
+    <p class="mb-4 text-gray-600 text-center">Upload An Audio File To Predict The Emotion.</p>
+
+    <div class="mb-4">
+        <input type="file" id="audioFile" accept="audio/*"
+               class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
+                      file:rounded-full file:border-0 file:text-sm file:font-semibold
+                      file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+    </div>
+
+    <button onclick="PredictEmotion()"
+            class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+        Predict Emotion
+    </button>
+
+    <div id="result" class="mt-4 text-center">
+        <p id="emotion" class="text-lg font-semibold"></p>
+        <p id="error" class="text-red-500"></p>
+    </div>
+</div>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
