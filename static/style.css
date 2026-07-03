@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent white */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #222;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #111;
+}
